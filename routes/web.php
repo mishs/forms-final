@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/forms', function () {
+    return view('forms');
+});
+
+Route::post('/calculate', function () {
+    // $input = request()->all();
+    $input = request()->get('first-number-input');
+    dd($input);
 });
